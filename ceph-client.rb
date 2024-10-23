@@ -11,8 +11,8 @@ class CephClient < Formula
     sha256 cellar: :any, arm64_ventura: "b6e30275e0c5012874b73130fd0119b7f40f8180f1c6b54e3abb1f8bf8680ed5"
   end
 
-  # depends_on "osxfuse"
-  depends_on "boost@1.76"
+  #depends_on "osxfuse"
+  #depends_on "boost@1.76"
   depends_on "boost"
   #depends_on "cython"
   depends_on "openssl" => :build
