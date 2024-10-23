@@ -13,6 +13,7 @@ class CephClient < Formula
 
   # depends_on "osxfuse"
   depends_on "boost@1.76"
+  depends_on "cython@0.29.37"
   depends_on "openssl" => :build
   depends_on "cmake" => :build
   depends_on "ninja" => :build
@@ -20,6 +21,7 @@ class CephClient < Formula
   depends_on "nss"
   depends_on "pkg-config" => :build
   depends_on "python@3.11"
+  #depends_on "python-setuptools" => :build
   depends_on "sphinx-doc" => :build
   depends_on "yasm"
   def caveats
