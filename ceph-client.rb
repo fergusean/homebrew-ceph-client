@@ -6,10 +6,9 @@ class CephClient < Formula
   revision 1
 
   bottle do
-    rebuild 1
+    rebuild 2
     root_url "https://github.com/bibarrav/homebrew-ceph-client/releases/download/quincy-17.2.7-1"
-    sha256 cellar: :any, ventura: "f021e3b278e66223eca9c73b88e928042db8ee0fbd08aa0e9f87fae6caa278e0"
-    sha256 cellar: :any, sonoma: "f021e3b278e66223eca9c73b88e928042db8ee0fbd08aa0e9f87fae6caa278e0"
+    sha256 cellar: :any, ventura: "e7e695b92254e2c4cdaea926b5594b96f28fa13fb672af3d9e6760fd04c57769"
   end
 
   #depends_on "osxfuse"
