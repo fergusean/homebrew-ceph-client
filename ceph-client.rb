@@ -27,6 +27,12 @@ class CephClient < Formula
   depends_on "yasm"
   def caveats
     <<-EOS.undent
+      macFUSE must be installed prior to building this formula. macFUSE is also necessary
+      if you plan to use the FUSE support of CephFS. You can either install macFUSE from
+      https://osxfuse.github.io or use the following command:
+        
+      brew install --cask macfuse
+      
     EOS
   end
 
@@ -88,6 +94,7 @@ class CephClient < Formula
       rbd
       cephfs
       ceph-conf
+      ceph-fuse
       manpages
       cython_rados
       cython_rbd
@@ -98,6 +105,7 @@ class CephClient < Formula
       executables = %w[
         bin/rados
         bin/rbd
+        bin/ceph-fuse
       ]
       executables.each do |file|
         MachO.open(file).linked_dylibs.each do |dylib|
@@ -110,6 +118,7 @@ class CephClient < Formula
       %w[
         ceph
         ceph-conf
+        ceph-fuse
         rados
         rbd
       ].each do |file|
@@ -135,6 +144,7 @@ class CephClient < Formula
       end
       %w[
         ceph-conf
+        ceph-fuse
         ceph
         librados-config
         rados
@@ -148,6 +158,7 @@ class CephClient < Formula
     bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
     %w[
       ceph-conf
+      ceph-fuse
       rados
       rbd
     ].each do |name|
@@ -168,6 +179,7 @@ class CephClient < Formula
 
   test do
     system "#{bin}/ceph", "--version"
+    system "#{bin}/ceph-fuse", "--version"
     system "#{bin}/rbd", "--version"
     system "#{bin}/rados", "--version"
     system "python", "-c", "import rados"
