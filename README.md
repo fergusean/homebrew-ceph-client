@@ -64,7 +64,7 @@ ceph-fuse[1670]: starting ceph client
 2024-10-25T06:58:02.404-0300 7ff84aa05dc0 -1 init, newargv = 0x7fe80f604300 newargc=5
 ceph-fuse[1670]: starting fuse
 ```
-[ceph-fuse docs]: https://docs.ceph.com/en/latest/man/8/ceph-fuse/
+[ceph-fuse docs][]
 
 ## Installing (Build process and bottle creation - tested on ventura)
 
@@ -86,3 +86,4 @@ brew bottle ceph-client
 
 [homebrew]: http://brew.sh/
 [ceph]: https://ceph.com/
+[ceph-fuse docs]: https://docs.ceph.com/en/latest/man/8/ceph-fuse/
