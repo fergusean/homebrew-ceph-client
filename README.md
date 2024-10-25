@@ -74,6 +74,7 @@ xcode-select --install
 brew install python@3.11
 pip3.11 install "cython<3.0.0"
 brew install --cask macfuse
+mkdir -p /usr/local/opt/cython/libexec/lib/python3.11/site-packages
 ```
 
 Then, follow install process including bottle creation
